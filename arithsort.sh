@@ -5,4 +5,6 @@ read a
 read b
 read c
 compute1=$((a+b*c))
-echo $compute1
+compute2=$((a*b+c))
+echo The result of first compute is $compute1
+echo The result of second compute is $compute2
