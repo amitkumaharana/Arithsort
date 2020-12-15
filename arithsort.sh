@@ -15,5 +15,19 @@ do
 	w=$((j+1))
         array[j]=${dict[$w]}
 done
-echo The reasults of all computes are ${array[@]}
-echo ${dict[1]}
+original=${array[@]}
+for((i=0;i<4;i++))
+do
+	for((j=$i+1;j<4;j++))
+        do
+                small=${array[i]}
+                big=${array[j]}
+                if [ $small -le $big ]
+                then
+                        array[i]=$big
+                        array[j]=$small
+                fi
+	done
+done
+echo $original
+echo ${array[@]}
