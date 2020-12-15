@@ -22,7 +22,7 @@ do
         do
                 small=${array[i]}
                 big=${array[j]}
-                if [ $small -le $big ]
+                if [ $small -gt $big ]
                 then
                         array[i]=$big
                         array[j]=$small
